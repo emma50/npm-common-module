@@ -1,1 +1,1 @@
-A node module for code sharing and reuse for a ticketing booking service
+A node module for code sharing and reuse for a ticket booking service
