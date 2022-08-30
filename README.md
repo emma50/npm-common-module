@@ -1,1 +1,1 @@
-A node module for code sharing and reuse for a ticket booking service
+An npm package for code sharing and reuse between different services of a ticket booking service application
