@@ -9,7 +9,7 @@ export interface OrderCancelledEvent {
     userId: string,
     ticket: {
       id: string,
-      price: string
+      price: number
     }
   }
 }
