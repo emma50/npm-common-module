@@ -38,7 +38,7 @@ export abstract class Listener<T extends Event> {
     )
 
     subscription.on('message', (msg: Message) => {
-      console.log(`Message received... ${this.subject} / ${this.queueGroupName} / ${msg.getData()}`)
+      console.log(`Message received... ${this.subject} / ${this.queueGroupName}`)
       const parsedData = this.parseMessage(msg)
       this.onMessage(parsedData, msg)
     })
@@ -48,7 +48,7 @@ export abstract class Listener<T extends Event> {
     const data =  msg.getData()
 
     return typeof data === 'string'
-      ? data
+      ? JSON.parse(data)
       : JSON.parse(data.toString('utf-8'))
   }
 }
