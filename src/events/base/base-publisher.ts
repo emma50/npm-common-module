@@ -10,7 +10,7 @@ export abstract class Publisher<T extends Event> {
 
   // subject: a channel to publish an event to i.e ticket-created
   abstract subject: T['subject']
-  private client: Stan
+  protected client: Stan
 
   constructor(client: Stan) {
     this.client = client
